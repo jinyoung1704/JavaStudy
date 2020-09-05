@@ -16,3 +16,10 @@ class S003 {
         return answer;
     }
 }
+
+//삼항 연산자 이용
+/*
+	String evenOrOdd(int num) {
+	    return num % 2 == 0 ? "Even": "Odd";
+	}
+*/
