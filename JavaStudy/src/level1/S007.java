@@ -82,3 +82,24 @@ class Solution {
     return new StringBuilder(new String(sol)).reverse().toString();
     }
  */
+
+/*
+ 	public class ReverseStr {
+    public String reverseStr(String str){
+    char[] chars = str.toCharArray(); --==>> toCharArray() : 문자열을 문자단위로 쪼개줌
+     char temp =' ';
+
+     for(int i = 0; i < str.length(); i++){
+         for(int j = 0; j < str.length()-1 ; j++){
+             if( chars[j] < chars[j+1]){
+                 temp = chars[j];
+                 chars[j] = chars[j+1];
+                 chars[j+1] = temp;
+             }
+         }
+     }
+     str = new String(chars, 0, chars.length); //문자를 문자열 단위로!
+        return str;
+    }
+ 
+ */

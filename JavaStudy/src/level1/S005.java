@@ -47,12 +47,14 @@ public class S005
 		boolean[] checked = new boolean[n + 1]; //boolean 기본값 false로 설정됨
 		
  		//2는 소수
-		for (int i = 2; i <= n; i++) {
+		for (int i = 2; i <= n; i++) 
+		{
 		
 			if (!checked[i]) //checked[i]가 false 인것 => 2 속해있음 => answer 올라감
 				answer++;
 				
-			for (int j = i; j <= n; j += i) { //2의 배수 다 제거 => true 로 만들어서 반복문이 끝났고 위의 반복문으로 갔을 때
+			for (int j = i; j <= n; j += i)
+			{ //2의 배수 다 제거 => true 로 만들어서 반복문이 끝났고 위의 반복문으로 갔을 때
 				if (!checked[j])  			  //카운트 안되도록!
 					checked[j] = true;
 			}
@@ -61,3 +63,4 @@ public class S005
   }
 }
  */
+
