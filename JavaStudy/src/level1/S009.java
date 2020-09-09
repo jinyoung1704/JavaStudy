@@ -52,3 +52,34 @@ public class S009
 	}
 
 }
+
+//--==>> 테스트 하나만 됨
+
+/*	다른 사람 풀이
+ 	
+ 	  String[] answer = new String[strings.length];
+        
+        ArrayList<String> arr = new ArrayList<String>();
+        
+        for(int i=0;i<strings.length;i++)
+            arr.add(strings[i].charAt(n) + strings[i]);
+        
+        Collections.sort(arr);
+        
+        for(int i=0;i<arr.size();i++)
+            answer[i] = arr.get(i).substring(1);
+        
+        return answer;
+ 
+ */ 
+
+/*
+ 	Arrays.sort(strings, new Comparator<String>(){
+      @Override
+      public int compare(String s1, String s2){
+          if(s1.charAt(n) > s2.charAt(n)) return 1;
+          else if(s1.charAt(n) == s2.charAt(n)) return s1.compareTo(s2);
+          else if(s1.charAt(n) < s2.charAt(n)) return -1;
+          else return 0;
+      }
+ */
