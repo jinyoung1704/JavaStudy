@@ -4,7 +4,8 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println(12);
+		int[] arr = {1,2,3,4};
+		System.out.println(arr);
 		
 	}
 }
