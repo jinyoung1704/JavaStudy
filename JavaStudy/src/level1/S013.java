@@ -21,33 +21,77 @@ public class S013
 
 class Solution_S013 {
     public String solution(String s, int n) {
-        String answer = "";
-        char small ='a';
-        char big = 'A';
-        char[] cha = new char[s.length()];
-        cha = s.toCharArray();
-        for(int i=0;i<cha.length;i++)
-        {
-        	System.out.println(cha[i]);
-        	if(cha[i]!=' ')
-        		cha[i] += n;
-            //System.out.println('A' + cha[i]-'Z');
-            if(cha[i]>'Z' && cha[i]<'a')
-            {
-            	big += cha[i]-'Z' -1;
-            	cha[i] = big;
-            }
-            else if(cha[i]>'z')
-            {
-            	small += cha[i]-'z' -1;
-            	cha[i] = small;
-            }
-                   
+            String answer = "";
             
-            answer += cha[i];
-        }
+            char[] cha = new char[s.length()];
+            cha = s.toCharArray();
+            for(int i=0;i<cha.length;i++)
+            {
+                char small ='a';
+                char big = 'A';
+                
+                
+                if(cha[i]<='Z' && cha[i]+n >'Z')
+                {
+                    cha[i] += n;
+                	big += cha[i]-'Z' -1;
+                	cha[i] = big;
+                }
+                else if(cha[i]>='a' && cha[i]+n >'z')
+                {
+                    cha[i] += n;
+                	small += cha[i]-'z' -1;
+                	cha[i] = small;
+                }
+               else if(cha[i]==' ')
+                    cha[i] = ' ';
+               else
+                    cha[i]+= n;
+                
+                
+                answer += cha[i];
+            }
 
-        
-        return answer;
+            
+            return answer;
+        }
     }
-}
+
+//다른 사람 풀이
+/*
+ 	class Caesar {
+    String caesar(String s, int n) {
+        String result = "";
+    n = n % 26;
+    for (int i = 0; i < s.length(); i++)
+    {
+	      char ch = s.charAt(i);
+	      if (Character.isLowerCase(ch))//소문자일 때
+	      {  
+	        ch = (char) ((ch - 'a' + n) % 26 + 'a');
+	      } 
+	      else if (Character.isUpperCase(ch)) 대문자일 때
+	      {
+	        ch = (char) ((ch - 'A' + n) % 26 + 'A');
+	      }
+	      result += ch;
+    }
+        return result;
+    }
+ */
+
+/*
+ 	int n = _n % 26;
+ 	
+    if (c >= 'a' && c <= 'z')
+    {
+        return 'a' + (c - 'a' + n) % 26;
+    } 
+    else if (c >= 'A' && c <= 'Z')
+    {
+        return 'A' + (c - 'A' + n) % 26;
+    } 
+    else 
+    {
+        return c;
+ */
