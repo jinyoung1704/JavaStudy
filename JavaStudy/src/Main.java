@@ -4,9 +4,10 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		char cha = 'a';
-		System.out.println((int)cha);
-		System.out.println('a'+'~'-'z');
+		String word = "Happy";
+		System.out.println(word.charAt(0));
+		String newWord = word.replace(word.substring(0,word.length()-2), "*");
+		System.out.println(newWord);
 		
 	}
 }
