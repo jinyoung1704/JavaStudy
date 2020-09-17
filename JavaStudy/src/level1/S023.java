@@ -16,6 +16,7 @@ public class S023
 
 }
 
+
 class Solution_S023 {
     public int[] solution(int[] arr) {
         int[] answer = {};
@@ -34,13 +35,44 @@ class Solution_S023 {
             }
             System.out.println(min);
             answer = new int[arr.length-1];
-            for(int i=0;i<answer.length;i++)
+            int count = 0;
+            for(int i=0;i<arr.length;i++) //처음에 answer.length 로 했었는데 그러면 길이가 3인 answer에 0,1,2까지만 돌아서 오류났음
             {
                 if(arr[i]!=min)
-                    answer[i] = arr[i];
-                
+                {
+                    answer[count++] = arr[i];
+                }
             }
         }
          return answer;
     }
 }
+
+//다른 사람 풀이
+/*
+ class Solution {
+  public int[] solution(int[] arr) {
+      if(arr.length <= 1){
+        int[] answer = {-1};    
+          return answer;
+      }
+
+      int min = arr[0];
+      for (int i = 1; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+        }
+
+      int[] answer = new int[arr.length-1];
+      int index = 0;
+
+      for (int i = 0; i < arr.length; i++) {
+            if(arr[i] == min) {
+                continue;
+            }
+            answer[index++] = arr[i];
+        }
+      return answer;
+  }
+}
+ 	
+ */
