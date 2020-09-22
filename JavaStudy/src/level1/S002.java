@@ -7,7 +7,7 @@ package level1;
  
 */
 
-class S002 {
+class Solution_S002 {
     public static String main(String s) {
         String answer = "";
         
@@ -18,3 +18,5 @@ class S002 {
         return answer;
     }
 }
+
+//substring(시작문자,끝문자) => 시작문자 인덱스부터 끝문자 인덱스 전까지 

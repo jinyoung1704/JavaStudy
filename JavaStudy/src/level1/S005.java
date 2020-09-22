@@ -10,23 +10,25 @@ public class S005
 	public static int main(int n)
 	{
 		 int answer = 0;
-	      boolean flag;
-	      for(int i=2;i<=n;i++)
-	      { 
-	          flag = true;
-	          for(int j=2;j<=i/2;j++)
-	          {
-	              if(i%j==0)
-	              {
-	                  flag = false;
-	                  break;
-	              }
-	          }
-	          
-	          if(flag == true)
-	              answer++;
-	          
-	      }
+		
+		  boolean flag; for(int i=2;i<=n;i++) 
+		  {
+			  flag = true; 
+			  for(int j=2;j<=i/2;j++) 
+			  {
+				  if(i%j==0) 
+				  { 
+					  flag = false; break; 
+				  } 
+			  }
+		  
+			  if(flag == true) 
+				  answer++;
+		  
+		  }
+		 
+		 
+		 
 	      return answer;
 	      
 	}
@@ -63,4 +65,12 @@ public class S005
   }
 }
  */
+
+
+
+
+
+
+
+
 

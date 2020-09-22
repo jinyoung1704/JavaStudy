@@ -20,3 +20,5 @@ public class S001
         return answer;
     }
 }
+
+//result += i%2==1 ? "수" : "박" ;
