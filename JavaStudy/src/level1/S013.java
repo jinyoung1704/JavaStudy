@@ -61,11 +61,15 @@ class Solution_S013 {
 /*
  	class Caesar {
     String caesar(String s, int n) {
+    
         String result = "";
-    n = n % 26;
+    
+    	n = n % 26;
+    	
     for (int i = 0; i < s.length(); i++)
     {
 	      char ch = s.charAt(i);
+	      
 	      if (Character.isLowerCase(ch))//소문자일 때
 	      {  
 	        ch = (char) ((ch - 'a' + n) % 26 + 'a');
@@ -76,7 +80,7 @@ class Solution_S013 {
 	      }
 	      result += ch;
     }
-        return result;
+         return result;
     }
  */
 
