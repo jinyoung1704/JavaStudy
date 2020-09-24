@@ -1,11 +1,12 @@
 package goorm;
 import java.io.*;
+//구름-소수 찾기
 public class G001
 {
 	
 }
 
-class Main {
+class Main_g001 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
