@@ -32,7 +32,7 @@ class Solution_S012 {
        
         if(temp.size()==0)
         {
-             answer = new int[1];
+             answer = new int[1];  // ==> answer = new int[]{1};
             answer[0] = -1;
         }
         else

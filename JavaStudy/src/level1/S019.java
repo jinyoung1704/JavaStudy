@@ -37,7 +37,7 @@ class Solution_S019 {
 
 //다른 사람 풀이
 /*
- 	 String[] temp = String.valueOf(num).split("");
+ 	 String[] temp = String.valueOf(n).split("");
 
     int sum = 0;
     for (String s : temp) {
@@ -45,9 +45,9 @@ class Solution_S019 {
     }
 
     if (num % sum == 0) {
-            return true;
+        return true;
     } else {
       return false;
     }
-    }
+    
  */
