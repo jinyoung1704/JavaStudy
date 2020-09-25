@@ -14,5 +14,6 @@ class Main {
 		int su = Integer.parseInt(input);
 			System.out.println(su%2==0 ? "even" : "odd");
 
+
 	}
 }
