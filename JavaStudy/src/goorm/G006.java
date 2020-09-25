@@ -6,7 +6,7 @@ public class G006
 
 }
 
-class Main {
+class Main_g006 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
