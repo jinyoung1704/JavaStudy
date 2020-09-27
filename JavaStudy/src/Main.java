@@ -1,13 +1,15 @@
-
+import java.io.InputStream;
+import java.util.Scanner;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		String word = "Happy";
-		System.out.println(word.charAt(0));
-		String newWord = word.replace(word.substring(0,word.length()-2), "*");
-		System.out.println(newWord);
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("입력?");
+		String a = sc.next();
+		System.out.println(a);
 		
 	}
 }
