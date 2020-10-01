@@ -37,7 +37,7 @@ public class b002
 				else if(a.length()<b.length()) 
 					return -1;  //그대로 유지
 				else
-					return a.compareTo(b);
+					return a.compareTo(b); // 두 개의 문자를 비교하여 값이 동일하면 0, 왼쪽이 더 크면 1,반대는 -1
 			}
 
 		});
