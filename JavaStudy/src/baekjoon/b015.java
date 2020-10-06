@@ -1,6 +1,7 @@
 package baekjoon;
 
 import java.util.Scanner;
+//백준 별찍기 -10 
 
 public class b015
 {
