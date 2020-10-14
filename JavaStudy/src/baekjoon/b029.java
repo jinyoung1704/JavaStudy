@@ -1,5 +1,5 @@
 package baekjoon;
-
+//백준 15649번 N과 M(1) - nPr 순열
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,7 +37,7 @@ public class b029
 		{
 			for(int i=0;i<M;i++) 
 			{
-				System.out.println(map[i] + " "); //1 2 출력
+				System.out.print(map[i] + " "); //1 2 출력
 				
 			}
 			System.out.println();
@@ -49,8 +49,8 @@ public class b029
 			if(visit[i]==0) //방문한 적이 없으면
 			{
 				visit[i] = 1;  //방문상태 1로 만들고
-				map[i] = arr[i]; //map[0] =1이 되고
-				dfs(i+1); //깊이가 1이 되어 다시 호출 위와 같이 반복하면 2가되어
+				map[v] = arr[i]; //map[0] =1이 되고
+				dfs(v+1); //깊이가 1이 되어 다시 호출 위와 같이 반복하면 2가되어
 				visit[i] =0; //한줄 완성 후 방문상태 초기화
 			}
 		}
