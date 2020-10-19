@@ -17,6 +17,10 @@ public class b032
 		
 		N = Integer.parseInt(br.readLine());
 		
+		arr = new int[N];
+		output = new int[N];
+		visit = new int[N];
+		
 		for(int i=0;i<N;i++)
 			arr[i] = i+1;
 		
@@ -30,16 +34,17 @@ public class b032
 		{
 			for(int i=0;i<N;i++)
 			{
-				System.out.println(output[i]);
+				System.out.print(output[i] + " ");
 			}
+			System.out.println();
 		}
 		
-		for(int i=v+1;i<=N;i++)
+		for(int i=0;i<N;i++)
 		{
 			if(visit[i]==0)
 			{
 				visit[i]=1;
-				output[v]=i+1;
+				output[v]=arr[i];
 				dfs(v+1);
 				visit[i]=0;
 			}
