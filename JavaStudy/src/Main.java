@@ -3,51 +3,27 @@ import java.util.Scanner;
 public class Main
 {
 	
-	static int N,M;
-	static int[] output,visit;
-	static int[] arr;
-	
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		N = sc.nextInt();
-		M = sc.nextInt();
+		int n = sc.nextInt();
 		
-		
-		arr = new int[N];
-		
-		for(int i=0;i<N;i++)
-			arr[i] = i+1;
-		
-		output = new int[N];
-		visit = new int[N];
-		
-		dfs(0);
-		
-	}
-	
-	public static void dfs(int v)
-	{
-		if(v==M)
+		for(int i=0;i<n;i++)
 		{
-			for(int i=0;i<M;i++)
+			String word = sc.nextLine();
+			String[] s = word.split(" ");
+			
+			for(String temp : s)
 			{
-				System.out.print(output[i] + " ");
+				for(int j=temp.length()-1;j>=0;j--)
+				{
+					System.out.print(temp.charAt(j));
+				}
+				System.out.print(" ");
 			}
+			
 			System.out.println();
-			return;
-		}
-		
-		for(int i=0;i<N;i++)
-		{
-			if(visit[i]==0)
-			{
-				visit[i] = 1;
-				output[v] = arr[i];
-				dfs(v+1);
-				visit[i] = 0;
-			}
 		}
 	}
 	
