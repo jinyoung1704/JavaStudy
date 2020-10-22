@@ -1,18 +1,7 @@
 package baekjoon;
+//프로그래머스 타켓넘버
 
-public class b036
-{
-	
-	
-		public static void main(String[] args)
-		{
-			solution_b036 sol = new solution_b036();
-		}
-	
-
-}
-
-class solution_b036
+class Solution
 {
 	static int target;
 	static int[] numbers;
@@ -20,8 +9,8 @@ class solution_b036
 	
     public int solution(int[] numbers, int target) 
     {
-        numbers = this.numbers;
-        target = this.target;
+        this.numbers = numbers;
+        this.target = target;
         
         dfs(0);
         return answer;
@@ -41,10 +30,10 @@ class solution_b036
             return;
         }
         
-        numbers[v+1] *=1;
+        numbers[v] *=1;
         dfs(v+1);
         
-        numbers[v+1] *= -1;
+        numbers[v] *= -1;
         dfs(v+1);
     }
 }
