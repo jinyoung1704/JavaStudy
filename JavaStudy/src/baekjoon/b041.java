@@ -1,4 +1,5 @@
 package baekjoon;
+//백준 1012번 유기농배추(dfs방식)
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class b041
 			N = Integer.parseInt(str[1]);
 			K = Integer.parseInt(str[2]);
 			
-			matrix = new int[N][M];
+			matrix = new int[N][M]; //세로 가로로 들어감 일반적으로 N*M
 			map = new int[N][M];
 			visit = new int[N][M];
 			
@@ -92,3 +93,7 @@ public class b041
 		}
 	}
 }
+
+
+
+
