@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main
 {
@@ -10,38 +11,13 @@ public class Main
 	   {
 	      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	      int n;
+	      String word = br.readLine();
 	      
-	      StringBuffer sb = new StringBuffer();
-	      do
-	      {
-	         n = Integer.parseInt(br.readLine());
-	         
-	         String str = Integer.toString(n);
-	         
-	         String rStr="";
-	         for(int i=str.length()-1;i>=0;i--)
-	         {
-	            rStr += str.charAt(i);
-	         }
-	         //System.out.println(str);
-	         //System.out.println(rStr);
-	         
-	         if(n!=0)
-	         {
-	        	 if(str.equals(rStr))
-	 	            sb.append("yes");
-	 	         else
-	 	            sb.append("no");
-	 	         
-	 	         sb.append("\n");
-	         }
-	         
-	         
-	      } while (n!=0);
-	      
-	      
-	      System.out.println(sb.toString());
+	      System.out.println(word.substring(1,3));
+	      Stack<Character> s = new Stack<Character>();
+	      s.add('r');
+	      int index = word.indexOf("(");
+	      System.out.println(index);
 	   }
 }
 
