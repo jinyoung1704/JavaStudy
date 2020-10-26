@@ -39,6 +39,7 @@ public class b049
 		{
 			if(cha[i]=='(')
 			{
+				//'0'을 안쓰면 숫자가 'char' 형식으로 들어가서 int로 바꿔서 합을 더해주기 위해
 				sLength += (cha[i-1]-'0') * result(i+1,s[i]) -1;
 				i = s[i];
 			}
