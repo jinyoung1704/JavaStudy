@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//백준 빗물
+//백준 14719번 빗물
 public class b051
 {
 	public static void main(String[] args) throws IOException
