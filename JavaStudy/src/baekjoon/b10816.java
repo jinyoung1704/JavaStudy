@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.StringTokenizer;
 
 //백준 10816번 숫자 카드2
 public class b10816
@@ -13,38 +13,22 @@ public class b10816
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int N = Integer.parseInt(br.readLine());
-		int[] arr = new int[N];
-		String[] temp = br.readLine().split(" ");
-		
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int[] count = new int[20000001]; //숫자 범위가 -10,000,000 ~ 10,000,000 이므로
 		
 		for(int i=0;i<N;i++)
-			arr[i] = (Integer.parseInt(temp[i]));
-		
-		Arrays.sort(arr);
+			count[Integer.parseInt(st.nextToken()) + 10000000 ]++;
 		
 		int M = Integer.parseInt(br.readLine());
-		temp = br.readLine().split(" ");
+		st = new StringTokenizer(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i=0;i<M;i++)
 		{
-			int su = Integer.parseInt(temp[i]);
-			
-			//System.out.println(su);
-			int count = 0;
-			
-			for(int j=0;j<arr.length;j++)
-			{
-				if(su==arr[j])
-					++count;
-			}
-			
-			 sb.append(count +" ");
-			//System.out.print(count+" ");
+			sb.append(count[Integer.parseInt(st.nextToken())+ 10000000] + " ");
 		}
 		
-		//for(int i=0;i<sb.length();i++)
-			System.out.print(sb.toString());
+			System.out.print(sb);
 	}
 }
