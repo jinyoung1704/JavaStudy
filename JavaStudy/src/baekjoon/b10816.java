@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
 //백준 10816번 숫자 카드2
@@ -30,5 +31,6 @@ public class b10816
 		}
 		
 			System.out.print(sb);
+		
 	}
 }
