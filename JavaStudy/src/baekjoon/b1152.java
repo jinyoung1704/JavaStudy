@@ -8,23 +8,18 @@ public class b1152
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		String str = sc.nextLine();
+		String[] str = sc.nextLine().split(" ");
 		int count = 0;
 		
-		for(int i=0;i<str.length();i++)
+		for(String s :str)
 		{
-			if(str.charAt(i)==' ')
-				count++;
-		}
-		count++;
-		
-		if(str.charAt(0)==' ')
-			count--;
-		else if((str.charAt(str.length()-1))==' ')
+			count++;
+			if(s.equals(""))
 				count--;
+		}
+		
 		
 		System.out.println(count);
-		
 		
 	}
 }
