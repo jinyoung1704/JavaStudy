@@ -4,42 +4,39 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class b4153
 {
 	public static void main(String[] args) throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		//int[][] arr = new int[str.length-1][3];
+		String temp = "";
+
 		ArrayList<String> list = new ArrayList<String>();
-				
-		int index = 0;
-		while(!br.readLine().equals("0 0 0"))
+		do
 		{
-			//split으로 자르면 안됨 
-			//String[] str = br.readLine();
-			/*
-			for(int i=0;i<arr.length;i++)
-			{
-				String[] temp = str[i].split("");
-				arr[index][i] = Integer.parseInt(temp[i]);
+			temp =  br.readLine();
+			String[] str =temp.split(" ");
+			
+			int a = Integer.parseInt(str[0]);
+			int b = Integer.parseInt(str[1]);
+			int c = Integer.parseInt(str[2]);
+			
+			if(Math.pow(a, 2) + Math.pow(b,2) == Math.pow(c,2))
+				list.add("right");
+			else if(Math.pow(a, 2) + Math.pow(c,2) == Math.pow(b,2))
+				list.add("right");
+			else if(Math.pow(b, 2) + Math.pow(c,2) == Math.pow(a,2))
+				list.add("right");
+			else
+				list.add("wrong");
 				
-				int a = (int) Math.pow(arr[index][0], 2);
-				int b = (int) Math.pow(arr[index][1], 2);
-				int c = (int) Math.pow(arr[index][2], 2);
-				
-				if(a+b==c)
-					list.add("right");
-				else
-					list.add("wrong");
-					
-				
-			}*/
-			index++;
-		}
-		
-		for(String s : list)
-			System.out.println(s);
+			
+		} while (!temp.equals("0 0 0"));
+	
+		list.remove(list.size()-1);
+		for(String result : list)
+			System.out.println(result);
 	}
 }
