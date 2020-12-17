@@ -28,7 +28,7 @@ public class b11866
 		while(qu.size()!=1)
 		{	
 			//자료구조 Queue<Integer> 일 때는 index가 int 형이여서 부를 수 없음.
-			sb.append(qu.get(idx).toString() + ",");
+			sb.append(qu.get(idx).toString() + ", "); //문제에서는 쉼표 뒤 띄어쓰기 주의
 			qu.remove(idx);
 			idx = ( idx + K ) % qu.size();
 		}
