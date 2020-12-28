@@ -39,3 +39,9 @@ class Solution_S030 {
         //위에서 모자 모두 착용안하는 경우,안경 모두 착용 안하는 경우 이렇게 계산했으므로
     }
 }
+
+// 참고
+/*
+	parseInt => String 을 int 로 형변환 (내용물을 형변환 할 때)
+	intValue => Object Integer 를 int로 (객체를 내용물로 변환)
+*/
