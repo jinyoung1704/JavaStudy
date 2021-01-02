@@ -17,6 +17,7 @@ class Solution_S030 {
     	
     	
         int answer = 1;
+        
         HashMap<String,Integer> map = new HashMap<>();
         for(int i=0;i<clothes.length;i++)
         {
